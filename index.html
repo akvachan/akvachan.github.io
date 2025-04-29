@@ -2,181 +2,191 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arsenii Kvachan</title>
-    <style>
-        body {
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 60px 0 0 0; 
-        background-color: #f5f5f5;
-        color: #333;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arsenii Kvachan</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 60px 0 0 0;
+      background-color: #f5f5f5;
+      color: #333;
     }
 
     nav {
-        text-align: center;
-        background-color: #2980b9;
-        padding: 1em;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
+      text-align: center;
+      background-color: #2980b9;
+      padding: 1em;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
     }
 
     nav a {
-        margin: 0 10px; 
-        text-decoration: none;
-        color: #ecf0f1;
-        font-weight: bold;
-        display: inline-block;
-        padding: 10px; 
-    }
-
-header {
-    background-color: #3498db;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-    position: fixed; 
-    width: 100%; 
-    top: 0; 
-    z-index: 1000; 
-}
-
-#hamburger-menu {
-    display: none;
-    font-size: 30px; 
-    cursor: pointer;
-    color: #fff; 
-}
-
-@media (max-width: 768px) {
-    nav a {
-        display: block; 
-        text-align: center;
-        font-size: 14px; 
-        padding: 10px 0;
-	border-bottom: 0.2px solid #fff;
-    }
-
-    #navbar {
-        display: none;
-        width: 100%;
-        box-sizing: border-box; 
-    }
-
-    #hamburger-menu {
-        display: block;
+      margin: 0 10px;
+      text-decoration: none;
+      color: #ecf0f1;
+      font-weight: bold;
+      display: inline-block;
+      padding: 10px;
     }
 
     header {
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    #hamburger-menu {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        padding: 10px 0;
+        border-bottom: 0.2px solid #fff;
+      }
+
+      #navbar {
+        display: none;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      #hamburger-menu {
+        display: block;
+      }
+
+      header {
         display: flex;
-        justify-content: space-between; 
+        justify-content: space-between;
         align-items: center;
-        padding: 0.5em; 
+        padding: 0.5em;
         position: fixed;
         width: 100%;
         top: 0;
         z-index: 1000;
+      }
     }
 
-}
+    section {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin: 20px;
+      padding: 20px;
+    }
 
-        section {
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            margin: 20px;
-            padding: 20px;
-        }
+    section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
 
-        section img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
+    object,
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+    }
 
-        object, iframe {
-            width: 100%;
-            height: 500px;
-            border: none;
-        }
-
-        footer {
-            background-color: #2980b9;
-            color: #fff;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    footer {
+      background-color: #2980b9;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-    <div id="hamburger-menu">&#9776;</div>
+  <div id="hamburger-menu">&#9776;</div>
 </header>
-	
-    <nav id="navbar">
-        <a href="#about">About</a>
-        <a href="#cv">CV</a>
-        <a href="#contacts">Contacts</a>
-    </nav>
 
-    <section id="about">
-        <h2>About</h2>
-        <img src="assets/avatar.jpeg" width="420" height="400"  alt="Avatar">
-        <p>Some description copy-pasted from LinkedIn</p>
-    </section>
+<nav id="navbar">
+  <a href="#about">About</a>
+  <a href="#cv">CV</a>
+  <a href="#contacts">Contacts</a>
+</nav>
 
-    <section id="cv">
-        <iframe src="assets/cv.pdf" width="640" height="480" allow="autoplay"></iframe>
-    </section>
+<section id="about">
+  <h2>About</h2>
+  <img src="assets/avatar.jpeg" width="420" height="400" alt="Avatar">
 
-   <section id="chatbot">
-        <h2>Ask my CV-chatbot a question</h2>
-        <p><strong><a href="https://insightqry.com/chat/759E7EA732" target="_blank">Here</a></strong> is link to the chatbot.</p>
-   </section>
+  <h3>Who I am</h3>
+  <p>I'm Arsenii, an AI specialist. I graduated with the CS and NLP Bachelor degree from Ludwig Maximilian University in Munich. I like to research, look for creative solutions and tinker on difficult problems using AI. I am a certified Tensorflow and GCP developer, so if you are interested in this stack or need help, write me a message.</p>
 
+  <h3>Where I am currently at</h3>
+  <p>Currently, I work as AI Developer at PwC. There, I engineer AI solutions for complex business requirements.</p>
 
-    <section id="contacts">
-      #TODO
-    </section>
+  <h3>What is my goal</h3>
+  <p>To become a go-to expert in AI, travel the world and consult companies on how to improve their businesses with AI. I would like to be invited to a project that will have a great impact on our society.</p>
+</section>
 
-    <footer>
-        &copy; 2025 Arsenii Kvachan
-    </footer>
+<section id="cv">
+  <iframe src="assets/cv.pdf" width="640" height="480" allow="autoplay"></iframe>
+</section>
+
+<section id="chatbot">
+  <h2>Ask my CV-chatbot a question</h2>
+  <p><strong><a href="https://insightqry.com/chat/759E7EA732" target="_blank">Here</a></strong> is the link to the chatbot.</p>
+</section>
+
+<section id="contacts">
+  <h2>Contacts</h2>
+  <p><strong>Phone:</strong> +421915787298</p>
+  <p><strong>Email:</strong> <a href="mailto:arsenii@kvachan.com">arsenii@kvachan.com</a></p>
+  <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/arseniikvachan/" target="_blank">https://www.linkedin.com/in/arseniikvachan/</a></p>
+</section>
+
+<footer>
+  &copy; 2025 Arsenii Kvachan
+</footer>
 
 <script>
-  document.getElementById('hamburger-menu').addEventListener('click', function() {
-      var navbar = document.getElementById('navbar');
-      navbar.style.display = navbar.style.display === 'block' ? 'none' : 'block';
+  document.getElementById('hamburger-menu').addEventListener('click', function () {
+    var navbar = document.getElementById('navbar');
+    navbar.style.display = navbar.style.display === 'block' ? 'none' : 'block';
   });
 
-  var maxWidthForMobile = 768; 
+  var maxWidthForMobile = 768;
 
   document.querySelectorAll('#navbar a').forEach(item => {
-      item.addEventListener('click', () => {
-          if (window.innerWidth <= maxWidthForMobile) {
-              var navbar = document.getElementById('navbar');
-              navbar.style.display = 'none';
-          }
-      });
+    item.addEventListener('click', () => {
+      if (window.innerWidth <= maxWidthForMobile) {
+        var navbar = document.getElementById('navbar');
+        navbar.style.display = 'none';
+      }
+    });
   });
 
   function adjustNavbarForScreenSize() {
-      var navbar = document.getElementById('navbar');
-      if (window.innerWidth > maxWidthForMobile) {
-          navbar.style.display = 'block'; 
-      } else if (navbar.style.display === 'block') {
-      } else {
-          navbar.style.display = 'none';
-      }
+    var navbar = document.getElementById('navbar');
+    if (window.innerWidth > maxWidthForMobile) {
+      navbar.style.display = 'block';
+    } else if (navbar.style.display === 'block') {
+    } else {
+      navbar.style.display = 'none';
+    }
   }
 
   window.addEventListener('resize', adjustNavbarForScreenSize);
@@ -184,4 +194,5 @@ header {
 </script>
 
 </body>
+
 </html>
