@@ -1,1 +1,209 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsenii Kvachan - Personal Website</title>
+    <style>
+        body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 60px 0 0 0; /* Adjust top padding to accommodate fixed nav bar */
+        background-color: #f5f5f5;
+        color: #333;
+    }
+
+    nav {
+        text-align: center;
+        background-color: #2980b9;
+        padding: 1em;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    nav a {
+        margin: 0 10px; /* Increase margin for tap targets */
+        text-decoration: none;
+        color: #ecf0f1;
+        font-weight: bold;
+        display: inline-block;
+        padding: 10px; /* Increase padding for larger tap targets */
+    }
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: fixed; /* Fix the header to the top */
+    width: 100%; /* Ensure the header spans the full width */
+    top: 0; /* Align the top of the header with the top of the viewport */
+    z-index: 1000; /* Keep the header on top of other content */
+}
+
+#hamburger-menu {
+    display: none; /* Initially hide the hamburger menu */
+    font-size: 30px; /* Size of the hamburger icon */
+    cursor: pointer;
+    color: #fff; /* Color of the hamburger icon */
+}
+
+@media (max-width: 768px) {
+    /* Other styles for mobile devices */
+
+    nav a {
+        display: block; /* Makes each link full width */
+        text-align: center; /* Centers the text within each link */
+        font-size: 14px; /* Adjust the font size as needed */
+        padding: 10px 0; /* Adds padding above and below the text for better spacing */
+	border-bottom: 0.2px solid #fff;
+        /* Add any other styling here */
+    }
+
+    #navbar {
+        display: none; /* Initially hide the navigation bar */
+        width: 100%; /* Ensure the navbar extends full width */
+        box-sizing: border-box; /* Ensures padding does not affect the total width of the navbar */
+        /* Other navbar styles */
+    }
+
+    #hamburger-menu {
+        display: block; /* Show the hamburger icon on small screens */
+        /* Hamburger menu styles */
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between; /* This aligns the hamburger menu icon and any other elements horizontally */
+        align-items: center; /* This centers items vertically within the header */
+        padding: 0.5em; /* Adjusts the padding within the header */
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+
+}
+
+        section {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        object, iframe {
+            width: 100%;
+            height: 500px; /* Adjust the height as needed */
+            border: none; /* Removes the border around the iframe */
+        }
+
+        footer {
+            background-color: #2980b9;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div id="hamburger-menu">&#9776;</div> <!-- Hamburger icon -->
+</header>
+	
+    <nav id="navbar">
+        <a href="#about-me">About Me</a>
+        <a href="#completed-courses">Completed Courses</a>
+        <a href="#bachelor-thesis">Bachelor Thesis</a>
+    </nav>
+
+    <section id="about-me">
+        <h2>About Me</h2>
+        <img src="avatar.jpeg" width="420" height="400"  alt="Your Photo">
+	<iframe src="https://drive.google.com/file/d/1Q5Wpvjgcw8ytd1-RU5wpatx6nye-EbEp/preview" width="640" height="480" allow="autoplay"></iframe>
+    </section>
+
+   <section id="qa-system">
+        <h2>Ask my CV-chatbot a question</h2>
+	<p><strong><a href="https://insightqry.com/chat/759E7EA732" target="_blank">Here</a></strong> is link to the chatbot.</p>
+   </section>
+
+
+    <section id="completed-courses">
+        <h2>Completed Courses</h2>
+        <ul>
+            <li><strong>1. Semester (completed):</strong> Programming in Java, Programming in Python, Introduction into Computational linguistics</li>
+            <li><strong>2. Semester (completed):</strong> Discrete mathematics and Linear Algebra, High-level programming, Computational semantics, Computer architecture, Database Managment</li>
+            <li><strong>3. Semester (completed):</strong> Operating Systems, Formal languages and Automata, Syntax of natural languages, Natural Language Processing, Software Development</li>
+            <li><strong>4. Semester (completed):</strong> Corpus linguistics, Information Retrieval, Computer networks and distributed Systems, HCI, Algorithms and Data Structures, ML 
+            <li><strong>5. Semester (completed):</strong> Information Extraction, Statistics, Computational Intelligence, Data Mining</li>
+            <li><strong>6. Semester (completed):</strong> Bachelor's Thesis, Scientific Writing, Autonomous Systems</li>
+        </ul>
+    </section>
+
+    <section id="bachelor-thesis">
+        <h2>Bachelor's Thesis</h2>
+        <h3>Spatial Reasoning in LLMs</h3>
+        <p><strong>Supervisor:</strong> Prof. Helmut Schmid</p>
+    </section>
+
+
+    <footer>
+        &copy; 2024 Arsenii Kvachan
+    </footer>
+
+<script>
+document.getElementById('hamburger-menu').addEventListener('click', function() {
+    var navbar = document.getElementById('navbar');
+    navbar.style.display = navbar.style.display === 'block' ? 'none' : 'block';
+});
+
+var maxWidthForMobile = 768; // Maximum screen width for mobile devices
+
+document.querySelectorAll('#navbar a').forEach(item => {
+    item.addEventListener('click', () => {
+        if (window.innerWidth <= maxWidthForMobile) {
+            var navbar = document.getElementById('navbar');
+            navbar.style.display = 'none';
+        }
+    });
+});
+
+// Adjust navbar visibility based on screen size
+function adjustNavbarForScreenSize() {
+    var navbar = document.getElementById('navbar');
+    if (window.innerWidth > maxWidthForMobile) {
+        navbar.style.display = 'block'; // Always show navbar on screens wider than maxWidthForMobile
+    } else if (navbar.style.display === 'block') {
+        // If the navbar is already open on a mobile device, keep it that way
+        // Otherwise, do nothing to avoid overriding the toggle behavior
+    } else {
+        navbar.style.display = 'none'; // Ensure navbar is hidden on smaller screens if it was not explicitly opened
+    }
+}
+
+// Listen for changes in window size
+window.addEventListener('resize', adjustNavbarForScreenSize);
+
+// Ensure correct initial state when loading the page
+window.addEventListener('load', adjustNavbarForScreenSize);
+</script>
+</body>
+
+</html>
