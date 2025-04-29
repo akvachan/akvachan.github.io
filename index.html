@@ -113,6 +113,25 @@
       bottom: 0;
       width: 100%;
     }
+
+    #about-content {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    #about-content img {
+      max-width: 400px;
+      height: auto;
+      margin-right: 20px;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    #about-text {
+      flex: 1;
+      min-width: 250px;
+    }
   </style>
 </head>
 
@@ -131,16 +150,20 @@
 
 <section id="about">
   <h2>About</h2>
-  <img src="assets/avatar.jpeg" width="420" height="400" alt="Avatar">
+  <div id="about-content">
+    <img src="assets/avatar.jpeg" width="420" height="400" alt="Avatar">
 
-  <h3>Who I am</h3>
-  <p>I'm Arsenii, an AI specialist. I graduated with the CS and NLP Bachelor degree from Ludwig Maximilian University in Munich. I like to research, look for creative solutions and tinker on difficult problems using AI. I am a certified Tensorflow and GCP developer, so if you are interested in this stack or need help, write me a message.</p>
+    <div id="about-text">
+      <h3>Who I am</h3>
+      <p>I'm Arsenii, an AI specialist. I graduated with the CS and NLP Bachelor degree from Ludwig Maximilian University in Munich. I like to research, look for creative solutions and tinker on difficult problems using AI. I am a certified Tensorflow and GCP developer, so if you are interested in this stack or need help, write me a message.</p>
 
-  <h3>Where I am currently at</h3>
-  <p>Currently, I work as AI Developer at PwC. There, I engineer AI solutions for complex business requirements.</p>
+      <h3>Where I am currently at</h3>
+      <p>Currently, I work as AI Developer at PwC. There, I engineer AI solutions for complex business requirements.</p>
 
-  <h3>What is my goal</h3>
-  <p>To become a go-to expert in AI, travel the world and consult companies on how to improve their businesses with AI. I would like to be invited to a project that will have a great impact on our society.</p>
+      <h3>What is my goal</h3>
+      <p>To become a go-to expert in AI, travel the world and consult companies on how to improve their businesses with AI. I would like to be invited to a project that will have a great impact on our society.</p>
+    </div>
+  </div>
 </section>
 
 <section id="cv">
