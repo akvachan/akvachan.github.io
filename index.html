@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arsenii Kvachan - Personal Website</title>
+    <title>Arsenii Kvachan</title>
     <style>
         body {
         font-family: 'Arial', sans-serif;
         margin: 0;
-        padding: 60px 0 0 0; /* Adjust top padding to accommodate fixed nav bar */
+        padding: 60px 0 0 0; 
         background-color: #f5f5f5;
         color: #333;
     }
@@ -25,12 +25,12 @@
     }
 
     nav a {
-        margin: 0 10px; /* Increase margin for tap targets */
+        margin: 0 10px; 
         text-decoration: none;
         color: #ecf0f1;
         font-weight: bold;
         display: inline-block;
-        padding: 10px; /* Increase padding for larger tap targets */
+        padding: 10px; 
     }
 
 header {
@@ -38,48 +38,43 @@ header {
     color: #fff;
     text-align: center;
     padding: 1em;
-    position: fixed; /* Fix the header to the top */
-    width: 100%; /* Ensure the header spans the full width */
-    top: 0; /* Align the top of the header with the top of the viewport */
-    z-index: 1000; /* Keep the header on top of other content */
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
 }
 
 #hamburger-menu {
-    display: none; /* Initially hide the hamburger menu */
-    font-size: 30px; /* Size of the hamburger icon */
+    display: none;
+    font-size: 30px; 
     cursor: pointer;
-    color: #fff; /* Color of the hamburger icon */
+    color: #fff; 
 }
 
 @media (max-width: 768px) {
-    /* Other styles for mobile devices */
-
     nav a {
-        display: block; /* Makes each link full width */
-        text-align: center; /* Centers the text within each link */
-        font-size: 14px; /* Adjust the font size as needed */
-        padding: 10px 0; /* Adds padding above and below the text for better spacing */
+        display: block; 
+        text-align: center;
+        font-size: 14px; 
+        padding: 10px 0;
 	border-bottom: 0.2px solid #fff;
-        /* Add any other styling here */
     }
 
     #navbar {
-        display: none; /* Initially hide the navigation bar */
-        width: 100%; /* Ensure the navbar extends full width */
-        box-sizing: border-box; /* Ensures padding does not affect the total width of the navbar */
-        /* Other navbar styles */
+        display: none;
+        width: 100%;
+        box-sizing: border-box; 
     }
 
     #hamburger-menu {
-        display: block; /* Show the hamburger icon on small screens */
-        /* Hamburger menu styles */
+        display: block;
     }
 
     header {
         display: flex;
-        justify-content: space-between; /* This aligns the hamburger menu icon and any other elements horizontally */
-        align-items: center; /* This centers items vertically within the header */
-        padding: 0.5em; /* Adjusts the padding within the header */
+        justify-content: space-between; 
+        align-items: center;
+        padding: 0.5em; 
         position: fixed;
         width: 100%;
         top: 0;
@@ -105,8 +100,8 @@ header {
 
         object, iframe {
             width: 100%;
-            height: 500px; /* Adjust the height as needed */
-            border: none; /* Removes the border around the iframe */
+            height: 500px;
+            border: none;
         }
 
         footer {
@@ -124,86 +119,69 @@ header {
 <body>
 
 <header>
-    <div id="hamburger-menu">&#9776;</div> <!-- Hamburger icon -->
+    <div id="hamburger-menu">&#9776;</div>
 </header>
 	
     <nav id="navbar">
-        <a href="#about-me">About Me</a>
-        <a href="#completed-courses">Completed Courses</a>
-        <a href="#bachelor-thesis">Bachelor Thesis</a>
+        <a href="#about">About</a>
+        <a href="#cv">CV</a>
+        <a href="#contacts">Contacts</a>
     </nav>
 
-    <section id="about-me">
-        <h2>About Me</h2>
-        <img src="avatar.jpeg" width="420" height="400"  alt="Your Photo">
-	<iframe src="https://drive.google.com/file/d/1Q5Wpvjgcw8ytd1-RU5wpatx6nye-EbEp/preview" width="640" height="480" allow="autoplay"></iframe>
+    <section id="about">
+        <h2>About</h2>
+        <img src="assets/avatar.jpeg" width="420" height="400"  alt="Avatar">
+        <p>Some description copy-pasted from LinkedIn</p>
     </section>
 
-   <section id="qa-system">
+    <section id="cv">
+        <iframe src="assets/cv.pdf" width="640" height="480" allow="autoplay"></iframe>
+    </section>
+
+   <section id="chatbot">
         <h2>Ask my CV-chatbot a question</h2>
-	<p><strong><a href="https://insightqry.com/chat/759E7EA732" target="_blank">Here</a></strong> is link to the chatbot.</p>
+        <p><strong><a href="https://insightqry.com/chat/759E7EA732" target="_blank">Here</a></strong> is link to the chatbot.</p>
    </section>
 
 
-    <section id="completed-courses">
-        <h2>Completed Courses</h2>
-        <ul>
-            <li><strong>1. Semester (completed):</strong> Programming in Java, Programming in Python, Introduction into Computational linguistics</li>
-            <li><strong>2. Semester (completed):</strong> Discrete mathematics and Linear Algebra, High-level programming, Computational semantics, Computer architecture, Database Managment</li>
-            <li><strong>3. Semester (completed):</strong> Operating Systems, Formal languages and Automata, Syntax of natural languages, Natural Language Processing, Software Development</li>
-            <li><strong>4. Semester (completed):</strong> Corpus linguistics, Information Retrieval, Computer networks and distributed Systems, HCI, Algorithms and Data Structures, ML 
-            <li><strong>5. Semester (completed):</strong> Information Extraction, Statistics, Computational Intelligence, Data Mining</li>
-            <li><strong>6. Semester (completed):</strong> Bachelor's Thesis, Scientific Writing, Autonomous Systems</li>
-        </ul>
+    <section id="contacts">
+      #TODO
     </section>
-
-    <section id="bachelor-thesis">
-        <h2>Bachelor's Thesis</h2>
-        <h3>Spatial Reasoning in LLMs</h3>
-        <p><strong>Supervisor:</strong> Prof. Helmut Schmid</p>
-    </section>
-
 
     <footer>
-        &copy; 2024 Arsenii Kvachan
+        &copy; 2025 Arsenii Kvachan
     </footer>
 
 <script>
-document.getElementById('hamburger-menu').addEventListener('click', function() {
-    var navbar = document.getElementById('navbar');
-    navbar.style.display = navbar.style.display === 'block' ? 'none' : 'block';
-});
+  document.getElementById('hamburger-menu').addEventListener('click', function() {
+      var navbar = document.getElementById('navbar');
+      navbar.style.display = navbar.style.display === 'block' ? 'none' : 'block';
+  });
 
-var maxWidthForMobile = 768; // Maximum screen width for mobile devices
+  var maxWidthForMobile = 768; 
 
-document.querySelectorAll('#navbar a').forEach(item => {
-    item.addEventListener('click', () => {
-        if (window.innerWidth <= maxWidthForMobile) {
-            var navbar = document.getElementById('navbar');
-            navbar.style.display = 'none';
-        }
-    });
-});
+  document.querySelectorAll('#navbar a').forEach(item => {
+      item.addEventListener('click', () => {
+          if (window.innerWidth <= maxWidthForMobile) {
+              var navbar = document.getElementById('navbar');
+              navbar.style.display = 'none';
+          }
+      });
+  });
 
-// Adjust navbar visibility based on screen size
-function adjustNavbarForScreenSize() {
-    var navbar = document.getElementById('navbar');
-    if (window.innerWidth > maxWidthForMobile) {
-        navbar.style.display = 'block'; // Always show navbar on screens wider than maxWidthForMobile
-    } else if (navbar.style.display === 'block') {
-        // If the navbar is already open on a mobile device, keep it that way
-        // Otherwise, do nothing to avoid overriding the toggle behavior
-    } else {
-        navbar.style.display = 'none'; // Ensure navbar is hidden on smaller screens if it was not explicitly opened
-    }
-}
+  function adjustNavbarForScreenSize() {
+      var navbar = document.getElementById('navbar');
+      if (window.innerWidth > maxWidthForMobile) {
+          navbar.style.display = 'block'; 
+      } else if (navbar.style.display === 'block') {
+      } else {
+          navbar.style.display = 'none';
+      }
+  }
 
-// Listen for changes in window size
-window.addEventListener('resize', adjustNavbarForScreenSize);
-
-// Ensure correct initial state when loading the page
-window.addEventListener('load', adjustNavbarForScreenSize);
+  window.addEventListener('resize', adjustNavbarForScreenSize);
+  window.addEventListener('load', adjustNavbarForScreenSize);
 </script>
-</body>
 
+</body>
 </html>
